@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1> Crear aula </h1>
+
+<form action="" method="POST">
+    <p>
+        {{ form.aula.label}}<br/>
+        {{ form.aula }}
+    </p>
+
+    <p style="display:inline;">
+        {{ form.horaSalida.label}}
+        {{ form.horaSalida }}
+        <br/>
+        {{ form.horaEntrada.label}}
+        {{ form.horaEntrada }}
+    </p>
+     <p>
+
+    </p>
+    <input type="submit" value="Crear aula">
+
+</form >
+{% endblock %}

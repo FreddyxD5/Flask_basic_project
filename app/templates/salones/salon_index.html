@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Salones disponibles </h1>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Salon</th>
+      <th scope="col">horaEntrada</th>
+      <th scope="col">horaSalida</th>
+        <th scope="col"> Acciones</th>
+    </tr>
+  </thead>
+  <tbody
+    {% for salon in data%}
+        <tr>
+            <th scope="row">{{ salon.id }}</th>
+            <td>{{ salon.aula }}</td>
+            <td>{{ salon.horaEntrada }}</td>
+            <td>{{ salon.horaSalida }}</td>
+            <td>
+                <button class="btn btn-danger">Eliminar</button>
+                <button class="btn btn-info">Editar</button>
+            </td>
+
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
